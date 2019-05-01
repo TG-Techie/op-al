@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="/css/general.css">
+  <link rel="stylesheet" href="/css/navbar.css">
+  <link rel="shortcut icon" href="/images/fav6_.ico">
+  <!--link rel="shortcut icon" href="/images/fav3.png"-->
+  <title>TG-Techie</title>
+  </head>
+  <body>
+
+    <div class="header">
+      <a href="/index.html" style='color:white; text-decoration: none;'>
+        <h1>
+          <img id='logo' style='height:1.75em;' src='/images/logo6_.png'>
+          <span style='font-size:1.75em;'>TG-Techie</span>
+          <span style="font-size:.7em;">
+            .com
+            <br> Jonah Yolles-Murphy
+          </span>
+        </h1>
+      </a>
+    </div>
+    {{content}}
+    <script>
+    //thank you: http://www.sanwebcorner.com/2017/08/how-to-create-blinking-text-image-using.html
+      let logo_srcs = [ '/images/logo6_.png', '/images/logo6.png'];
+      let fav_srcs = ['/images/fav6_.ico','/images/fav6.ico'];
+      //Preload your images
+      let imgs = logo_srcs.map(src => {
+        let img = new Image();
+        img.style = 'height:1.75em;';
+        img.src = src;
+        return img
+      });
+
+      let favs = fav_srcs.map(src => {
+        let img = new Image();
+        img.style = 'height:1.75em;';
+        img.src = src;
+        return img
+      });
+
+      let img = document.getElementById('logo');
+
+      let current = 0; //Current image displayed
+      let interval;
+
+      //removed contents of funciton and put here
+      interval = setInterval(() => {
+        //increment current
+        if (current + 1 > logo_srcs.length - 1) current = 0;
+        else current++;
+
+        //logo part
+        img.src = imgs[current].src
+        //favicon part
+          var link = document.querySelector("link[rel*='icon']") || document.createElement('link');
+          link.type = favs[current];
+          link.rel = 'shortcut icon';
+          link.href = fav_srcs[current];
+          document.getElementsByTagName('head')[0].appendChild(link);
+      }, 500);
+    </script>
+  </body>
+</html>

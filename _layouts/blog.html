@@ -1,0 +1,33 @@
+---
+layout: header
+---
+<script>
+ document.title = "TG-Blog";
+</script>
+
+<div id="navbar">
+  <a href="/index.html">Home</a>
+  <a href="/trico.html">Tricorder</a>
+  <a class="active"  href="/blog">blog</a>
+  <a href="https://docs.tg-techie.com">TG-Docs</a>
+  <a href="/contact">Contact</a>
+</div>
+
+<div class="content">
+  {{content}}
+</div>
+
+<script>
+window.onscroll = function() {myFunction()};
+
+var navbar = document.getElementById("navbar");
+var sticky = navbar.offsetTop;
+
+function myFunction() {
+  if (window.pageYOffset >= sticky) {
+    navbar.classList.add("sticky")
+  } else {
+    navbar.classList.remove("sticky");
+  }
+}
+</script>

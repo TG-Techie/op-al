@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Operation Albedo</title>
+    <link rel="stylesheet" href="/css/jojo.css">
+    </head>
+    
+    <body>
+
+        <div class="heading">
+            <a href="/index.html">
+                <em class="normal">Operation Albedo</em>
+            </a>
+        </div>
+
+        <div class="bar" id='bar'>
+            <!--only things w/ href can be in this div: so <a> tabs-->
+            
+            <!--the home page-->
+                <a href="/index.html">Home</a>
+            <!--the mission statment and goals-->
+                <a href="/mission.html">Mission Statement</a>
+            <!--hotlines here?-->
+                <a href="/resources.html">Resources</a>
+            <!--combine about us and meet the team-->
+                <a href="/about.html">About Us</a>
+        </div>
+
+        <div class="content">
+            {{ content }}
+        </div>
+
+    </body>
+    
+    <script type="text/javascript">
+        // Get the container element
+        var links = document.getElementById("bar").children;
+        //console.log(links)
+
+        // Loop through the buttons and add the active class to the current/clicked button
+        for (var i = 0; i < links.length; i++) {
+            let link =  links[i];
+            if (link.href == location.href){
+                //console.log(link);
+                link.classList.add("active")
+            }
+        }
+    </script>
+</html>

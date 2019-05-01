@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Operation Albedo</title>
+    <style media="screen">
+      body{
+        margin: 0px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="heading">
+      Operation Albedo
+    </div>
+      links to stuff
+    <div class="bar">
+
+    </div
+
+    <div class="stuff">
+      {{ content }}
+    </div>
+
+  </body>
+</html>

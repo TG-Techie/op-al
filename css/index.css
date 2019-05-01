@@ -1,0 +1,44 @@
+div.grid{
+    display: grid;
+    background: url("/media/images/cover.jpg");
+    background-size: cover;
+    background-position: center 30%;
+}
+
+.grid > p{
+    margin: .5em 0em;
+    padding-left: 65px;
+    font-size: 6em;
+    color: white;
+}
+
+.grid > p.operation{
+    color: coral;
+    margin-bottom: 0em;
+}
+.grid > p.albedo{
+    margin-top: 0em;
+    margin-bottom: 0em;
+}
+
+.grid > p.tagline{
+    margin-top: 0em;
+    font-size: 3em
+}
+
+
+
+/*----------content--------------------*/
+
+.choices{
+    display: grid;
+    grid-template-columns: 1fr 4fr 6fr 1fr;
+    grid-column-gap: 1em;
+    margin: 65px none;
+
+}
+
+
+.choices ul{
+    list-style: none;
+}

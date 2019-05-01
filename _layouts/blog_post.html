@@ -1,0 +1,22 @@
+---
+layout: "blog"
+---
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>TG-Blog</title>
+  </head>
+  <body class="page">
+    <div>
+      <h1>{{page.title}}: <span style='font-size:75%'>{{page.sub_title}}</span></h1>
+      {%- assign date_format = site.minima.date_format | default: "%b %-d, %Y" -%}
+      {{ page.date | date: date_format }}
+      <hr>
+    </div>
+
+    <div class="content">
+      {{content}}
+    </div>
+  </body>
+</html>

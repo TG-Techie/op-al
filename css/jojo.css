@@ -1,0 +1,78 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat');
+/*----------temp------------------------------*/
+/*end temp*/
+
+/*----------generals------------------------------*/
+body{
+    margin: 0px;
+    background-color: #fff;
+    font-family:"Montserrat";
+    color: #555;
+}
+
+em.normal{font-style: normal;}
+
+a{  text-decoration: none;
+    color: rebeccapurple;
+}
+
+div{width: 100%}
+/*end generals*/
+
+/*----------heading------------------------------*/
+.heading{
+    background-color: coral;
+    padding: 1em;
+    /*coral;*/
+}
+
+.heading a{
+    color: white;
+    font-size: 3em;
+}
+/*end heading*/
+
+/*----------navbar------------------------------*/
+.bar{
+    background-color: white;
+    border-bottom-width: thin;
+    border-style: solid none;
+    border-top-color: mediumpurple;
+    border-bottom-color: coral;
+}
+
+.bar>a{
+    width: 1fr;
+    color: coral;
+    font-size: 2em;
+    padding: 0em 1em;
+    /*text-decoration: none;*/
+}
+
+.bar>a:hover{
+    color: white;
+    background-color: coral;
+}
+
+.bar>a.active{
+    color: gold;
+}
+.bar>a.active:hover {
+    color: white;
+    background-color: gold;
+}
+/*end navbar*/
+
+/*----------content------------------------------*/
+/*.content{
+    margin:1em;
+}*/
+
+.content h1, .content h2, .content h3{
+    color: coral;
+}
+
+.content h4, .content h5, .content h6{
+    color: gold;
+}
+/*end content*/
